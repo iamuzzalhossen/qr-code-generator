@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px 20px;
+}
+body::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(72, 126, 176, 0.85);
+    z-index: -1;
+}
+.container {
+    width: 450px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+h1 {
+    font-size: 22px;
+    line-height: 30px;
+    color: #487eb0;
+}
+.qrCode {
+    display: flex;
+    flex-direction: column;
+}
+.qrCode input {
+    outline: 0;
+    background: #ffffff;
+    color: #202020;
+    font-size: 16px;
+    border: 2px solid #dddddd;
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin: 20px 0px 10px 0px;
+}
+.qrCode button {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    background: #05c46b;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#imageBox {
+    width: 100%;
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+#imageBox img {
+    max-height: 300px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+}
+#imageBox.showQRCode {
+    max-height: 300px;
+    margin: 10px 0px;
+}
